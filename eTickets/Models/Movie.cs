@@ -8,13 +8,22 @@ namespace eTickets.Models
     {
         [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public double Price { get; set; }
-        public string ImageURL { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public MovieCategory MovieCategory { get; set; }
+
+		[Display(Name = "Movie Name")]
+		public string Name { get; set; }
+
+		[Display(Name = "Description")]
+		public string Description { get; set; }
+		[Display(Name = "Price")]
+		public double Price { get; set; }
+		[Display(Name = "Image URL")]
+		public string ImageURL { get; set; }
+		[Display(Name = "Start date")]
+		public DateTime StartDate { get; set; }
+		[Display(Name = "end date")]
+		public DateTime EndDate { get; set; }
+		[Display(Name = "Movie Category")]
+		public MovieCategory MovieCategory { get; set; }
 
         //Relationships
         public List<Actor_Movie> Actors_Movies { get; set; }
