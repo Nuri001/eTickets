@@ -13,7 +13,10 @@ namespace eTickets.Data.Services
 		}
 		public void Add(Actor actor)
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("Actor serves add");
+			_context.Actors.Add(actor);
+			_context.SaveChanges();
+			Console.WriteLine("Actor serves add end");
 		}
 
 		public void Delete(int id)
